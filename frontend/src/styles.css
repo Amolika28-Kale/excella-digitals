@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -----------------------------
+   GLOBAL REUSABLE COMPONENTS
+------------------------------ */
+
+.header {
+  @apply bg-indigo-600 text-white px-6 py-4 
+         flex justify-between items-center;
+}
+
+.container {
+  @apply max-w-6xl mx-auto p-6;
+}
+
+.card {
+  @apply bg-white shadow rounded-lg p-6 mb-4;
+}
+
+.btn {
+  @apply inline-block bg-indigo-600 text-white 
+         px-4 py-2 rounded-lg font-medium
+         hover:bg-indigo-700 transition;
+}
+
+.input {
+  @apply border rounded px-3 py-2 w-full
+         focus:ring-2 focus:ring-indigo-400
+         focus:outline-none bg-white;
+}
+
+.navlink {
+  @apply text-white ml-4 hover:underline;
+}
+
+/* -----------------------------
+   SIDEBAR (Admin & Student)
+------------------------------ */
+
+.sidebar-link {
+  @apply flex items-center gap-3 
+         p-3 rounded-lg mb-2 
+         font-medium cursor-pointer
+         text-gray-700 hover:bg-indigo-100;
+}
+
+/* Active link state */
+.sidebar-active {
+  @apply bg-indigo-600 text-white hover:bg-indigo-700;
+}
+
+/* Sidebar container */
+.sidebar-container {
+  @apply w-64 bg-white shadow-xl h-screen 
+         fixed left-0 top-0 px-4 py-6 border-r 
+         transition-transform duration-300;
+}
+
+/* When sidebar is closed on mobile */
+.sidebar-hidden {
+  @apply -translate-x-full lg:translate-x-0;
+}
+
+/* -----------------------------
+   TOPBAR
+------------------------------ */
+
+.topbar {
+  @apply fixed top-0 left-0 lg:left-64 right-0 h-16 
+         bg-white border-b shadow 
+         flex items-center justify-between 
+         px-4 lg:px-6 z-30;
+}
+
+/* -----------------------------
+   ANIMATIONS
+------------------------------ */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade {
+  animation: fade 0.2s ease-out;
+}
+

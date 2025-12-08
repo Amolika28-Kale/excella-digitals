@@ -1,0 +1,2 @@
+import React from 'react'; import { Link } from 'react-router-dom';
+export default function Admin(){ return (<div><div className='header'><div className='font-semibold'>Admin Panel</div></div><div className='container'><div className='grid md:grid-cols-3 gap-4'><Link to='/admin/courses' className='card block text-center'>Manage Courses</Link><Link to='/admin' className='card block text-center'>Users & Payments</Link><Link to='/admin' className='card block text-center'>Notifications</Link></div></div></div>) }
