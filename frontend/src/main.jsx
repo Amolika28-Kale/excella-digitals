@@ -28,6 +28,7 @@ import CoursePlayer from "./pages/CoursePlayer";
 import ReferralShare from "./pages/ReferralShare";
 import Settings from "./pages/Setting";
 import AdminNotifications from "./pages/admin/notifications";
+import Landing from "./pages/Landing";
 
 function PrivateRoute({ children }) {
   const token = localStorage.getItem("token");
@@ -49,6 +50,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         {/* Public */}
+        <Route path="/" element={<Landing />} />
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
